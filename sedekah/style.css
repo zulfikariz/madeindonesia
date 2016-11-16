@@ -1,0 +1,981 @@
+/*
+Theme Name: Sedekah Celengan
+Theme URI: http://www.sedekahcelengan.com
+Author: Zulfikar
+Author URI: http://facebook.com/zulfikar adi
+Description: For Komunitas Sedekah Celengan
+Version: 1.0
+License: GNU General Public License v2 or later
+Tags: Sedekah
+
+*/
+
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,300,600,700);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,600,700,900);
+
+body {
+    font: 14px/180% "PT Sans", Helvetica, Arial, sans-serif;
+    color: #212121;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased; 
+    background: #fff;
+    font-weight: 400;
+}
+
+#main-container {
+    position: relative;
+}
+
+.loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;logo
+    z-index: 9999;
+    background: url('images/page-loader.gif') 50% 50% no-repeat #fff;
+}
+
+.nicescroll-rails {
+    background: rgba(225,225,225,0.5) !important;
+    z-index: 6 !important;
+}
+
+.nicescroll-rails div {
+   background: #6cc49a !important;
+   border-radius: 0 !important;
+   border: none !important;
+   width: 7px !important;
+   z-index: 6 !important;
+}
+
+.clearfix {
+    width: 100%;
+    clear: both;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.orange {
+    background: #f58a3f;
+    color: #fff;
+}
+
+.green {
+    background: #6cc49a;
+    color: #fff;
+}
+
+.a:link {
+    font-family: "Roboto";
+}
+
+.table {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.tablecell {
+    display: table-cell;
+    text-align: center;
+    padding: 20px;
+    vertical-align: middle;
+}
+/* SLIDER */
+
+#slider {
+    background: #000;
+    max-height: 700px;
+}
+
+.mc-image {
+    max-height: 700px;
+}
+
+.in-slide-content {
+    position: absolute;
+    z-index: 2;
+    bottom: 100px;
+    width: 60%;
+    font-family: "Roboto";
+    color: #fff;
+    line-height: 40px;
+    display: none;
+
+}
+
+.in-slide-content p {
+    font-size: 48px;
+    font-weight: 700;
+    margin: 30px 0 50px 0;
+    text-transform: uppercase;
+    line-height: 120%;
+}
+
+.mc-image {
+    text-align: left;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.slideritem img {
+    width: 100%;
+}
+
+.bcg {
+    
+}
+
+.button {
+    padding: 15px 60px;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
+    display: inline-block;
+    margin-right: 20px;
+    border: solid 1px;
+}
+
+.no-border {
+    border: none !important;
+}
+
+.button i {
+    margin-right: 7px;
+}
+
+/*  header  */
+
+#top-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    z-index: 3;
+    text-align: right;
+}
+
+.container {
+    width: 1160px;
+    margin: 0 auto;
+}
+
+/* Menu */
+
+nav#top-menu {
+    display: inline-block;
+    padding: 10px 0;
+    line-height: 110%;
+}
+
+nav#top-menu ul li,
+nav#main-menu ul li,
+.footer-menu ul li {
+    display: inline-block;
+    font-family: "Roboto";
+    line-height: 120%;
+    position: relative;
+}
+
+nav#main-menu ul li:hover > a {
+    color: #f58a3f;
+}
+
+nav#top-menu ul li a {
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 0 10px;
+    display: block;
+}
+
+nav#main-menu ul li a {
+    text-transform: uppercase;
+    padding: 20px;
+    display: block;
+    font-weight: 700;
+}
+
+nav#top-menu ul li:first-child {
+    border-right: solid 1px;
+    margin-right: 10px;
+}
+
+nav#top-menu ul li:last-child {
+    margin-left: 10px;
+    border-left: solid 1px;
+    font-weight: bold;
+}
+
+nav#top-menu ul li:last-child a i {
+    margin-right: 7px;
+}
+
+#navigation {
+    text-align: right;
+    padding: 15px 0;
+}
+
+#logo {
+    float: left;
+}
+
+nav#main-menu {
+    display: inline-block;
+    margin-top: 5px;
+}
+
+li.haschild {
+    padding-right: 10px;
+    background: url(images/dropdown.png) right center no-repeat;
+}
+
+.dropdown {
+    background: #f58a3f;
+    width: 170px;
+    position: absolute;
+    top: 70px;
+    opacity: 0;
+    border-radius: 5px;
+    color: #fff;
+    text-align: left;
+    left: 100%;
+    margin-left: -91px;
+}
+
+.dropdown:before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -7px;
+    width: 0px;
+    height: 0px;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 10px solid #f58a3f;
+}
+
+ul.dropdown li:hover a {
+    color: #ffd9be !important;
+}
+
+
+
+/* Section */
+
+.page-title {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 80px 0 40px 0;
+    font-weight: bold;
+    font-family: "Roboto";
+}
+
+.page-title h1 {
+    font-size: 48px;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.breadcrumbs {
+    color: #b7fbdb;
+}
+
+.breadcrumbs a,
+.breadcrumbs span {
+    padding: 0 10px;
+}
+
+.bmee-widget {
+    padding: 100px 0;
+}
+
+#bmee-student-testimonial-widget.bmee-widget {
+    padding: 0;
+}
+
+.section-title h2 {
+    font-size: 40px;
+    color: #696969;
+    font-family: "Roboto";
+    text-transform: uppercase;
+    width: 40%;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 80px;
+    margin: 0 auto;
+    line-height: 120%;
+}
+
+.page .section-title h2 {
+    font-size: 36px;
+}
+.section-title span {
+    color: #6cc49a;
+    text-align: center;
+    font-size: 40px;
+}
+.section-title h2 span {
+    color: #6cc49a;
+}
+
+.section-title img {
+     border-radius: 10px
+     width:100px;
+     height:100px;
+}
+
+#bmee-intro-widget {
+    text-align: center;
+}
+
+#bmee-intro-widget .intro {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#bmee-intro-widget .intro span {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+#bmee-intro-widget .intro p {
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 70px;
+}
+
+#intro-feature {
+    margin-top: 80px;
+}
+
+#intro-feature ul {
+    float: left;
+    width: 100%;
+}
+
+#intro-feature ul li {
+    float: left;
+    width: 30%;
+    text-align: left;
+    margin-right: 5%;
+}
+
+#intro-feature ul li:last-child {
+    margin-right: 0;
+}
+
+#intro-feature ul li a {
+    float: left;
+    border: solid 1px;
+    border-radius: 5px;
+    font-size: 60px;
+    padding: 20px;
+    margin-right: 20px;
+}
+
+#intro-feature ul li .detail span {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.testimonial {
+    text-align: left;
+    position: relative;
+    margin-top: 100px;
+}
+
+.testimonial ul li img {
+    float: left;
+    width: 30%;
+}
+
+.testimonial ul li .testimoni-item {
+    margin-left: 30%;
+    margin-right: 100px;
+    font-family: "Roboto";
+    font-weight: 700;
+}
+
+.testimonial ul li .testimoni-item span {
+    color: #f58a3f;
+    font-size:  24px;
+    margin-top: 20px;
+    display: block;
+}
+
+.testimonial ul li .testimoni-item quote {
+    display: block;
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 50px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.testimonial ul li .testimoni-item cite {
+    color: #a5a5a5;
+    font-size: italic;
+    font-weight: 300;
+}
+
+#bmee-testimoni-widget.bmee-widget {
+    background: url(images/testi-bg.jpg) bottom repeat-x;
+    padding-bottom: 0;
+}
+
+.testimonial .flex-direction-nav {
+    display: none!important;
+}
+
+.testimonial .flex-control-nav.flex-control-paging {
+    bottom: 40px;
+}
+
+.student-testimonial .left-title {
+    width: 200px;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 40px;
+    padding: 20px 100px 20px 0;
+    float: left;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#bmee-student-testimonial-widget .container {
+    position: relative;
+}
+
+.student-testi {
+    margin-left: 300px;
+}
+
+.student-testi ul li {
+    width: 50%;
+}
+
+.student-testi ul li img {
+    float: left;
+    margin-right: 20px;
+}
+
+.student-testi ul li .detail {
+    padding: 15px 20px 0 0;
+}
+.student-testi ul li cite {
+    font-weight: 700;
+    margin-top: 5px;
+    display: block;
+}
+
+#footer {
+    background: #393939;
+    color: #fff;
+    padding-top: 50px;
+}
+
+#second-logo.column {
+    width: 25%;
+    max-width: inherit;
+
+}
+
+.footer-top .column {
+    max-width: 30%;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 1%;
+}
+
+.column a.detail {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.column a.detail span {
+    margin-left: 30px;
+    display: block;
+}
+
+.column a.detail i {
+    float: left;
+}
+
+.footer-menu ul li a {
+    color: #9b9b9b;
+    padding: 10px;
+}
+
+#menu-left {
+    float: left;
+}
+
+.footer-menu {
+    text-align: right;
+    margin-top: 60px;
+    margin-bottom: 10px;
+    display: inline-block;
+    width: 100%;
+}
+
+#footer-bottom {
+    background: #222222;
+    padding: 20px 0;
+    text-align: right;
+}
+
+#footer-bottom .site-info {
+    float: left;
+}
+
+.timeline {
+    padding: 60px 0;
+    position: relative;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.timeline ul li {
+    display: inline-block;
+    margin-bottom: 50px;
+}
+
+.timeline ul {
+    position: relative;
+    z-index: 2;
+}
+
+.timeline:before {
+    position: absolute;
+    content: '';
+    width: 10px;
+    background: #d1d1d1;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -5px;
+    z-index: 0;
+}
+
+.timeline .meta {
+    text-transform: uppercase;
+    font-family: "Roboto";
+    padding: 10px;
+    border-radius:10px;
+    margin-bottom: 40px;
+    display: inline-block;
+    border: solid 3px #fff;
+    font-weight: 700;
+    position: relative;
+}
+
+.timeline .meta:before {
+    position: absolute;
+    bottom: 100%;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    left: 50%;
+    margin-left: -13px;
+    margin-bottom: -3px;
+    border: solid 3px #fff;
+    z-index: 1;
+    background: #f58a3f;
+    content: '';
+}
+
+.timeline .thumbnail .img {
+    margin: 0 25px;
+    display: inline-block;
+}
+
+.timeline .detail {
+    background: #fff;
+    padding: 40px 0;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.timeline .detail h3 {
+    color: #696969;
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.timeline .detail h3 span {
+    color: #6cc49a;
+}
+
+.team {
+    margin-top: 70px;
+    margin-bottom: 100px;
+}
+
+.team ul li {
+    position: relative;
+    width: 30%;
+    margin-right: 4%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.team ul li:last-child {
+    margin-right: 0;
+}
+
+.team ul li .thumbnail img {
+    width: 100%;
+    float: left;
+}
+
+.team ul li .overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(108,196,154,0.9);
+    text-align: center;
+    padding: 20px 10px;
+    color: #fff;
+    display: none;
+}
+
+.team ul li .overlay .detail h3,
+.team ul li .overlay .detail span{
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.team ul li .overlay .detail span {
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.team ul li .overlay .detail p {
+    margin-bottom: 20px;
+}
+
+.team ul li .overlay .detail .social a {
+    padding: 0 10px;
+}
+
+.wysiwyg p {
+    margin-bottom: 20px;
+}
+
+.wysiwyg ul, .wysiwyg ol {
+    padding-left: 40px;
+}
+
+.wysiwyg ul li, .wysiwyg ol li {
+    padding-bottom: 20px;
+}
+
+.wysiwyg ul li {
+    padding-left: 30px;
+    background: url(images/li.png) 0 9px no-repeat;
+}
+
+.wysiwyg ol li abbr {
+    margin-right: 20px;
+}
+
+.wysiwyg strong {
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.wysiwyg blockquote {
+    color: #767676;
+    font-style: italic;
+    font-size: 18px;
+    margin: 20px 0 20px 20px;
+    max-width: 100%;
+}
+
+.wysiwyg blockquote cite {
+    font-style: normal;
+    font-size: 11px;
+    text-transform: uppercase;
+    display: block;
+}
+
+.wysiwyg blockquote .icon-quote {
+    width: 50px;
+    float: left;
+    height: 50px;
+    background: url(images/quote.png) no-repeat;
+    margin-right: 10px;
+}
+
+.wysiwyg .alignleft {
+    float: left;
+}
+
+.wysiwyg .alignright {
+    float: right;
+}
+
+.wysiwyg .wp-caption {
+    text-align: center;
+    font-style: 10px;
+    font-style: italic;
+    margin-right: 30px;
+}
+
+.gallery.column-5 dl dt {
+    width: 18%;
+    margin-right: 2.5%;
+    float: left;
+}
+
+
+.gallery {
+    margin: 40px 0;
+}
+
+.gallery.column-5 dl dt:last-child {
+    margin-right: 0;
+}
+
+.gallery.column-5 dl dt img {
+    width: 100%;
+}
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+}
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+.feed{
+    background-color: #f8f8f8;
+}
+.feed img{
+     border-radius: 50%;
+
+}
+.comment img{
+     border-radius: 50%;
+
+}
+
+/*for news at home */
+.left
+{
+width:30%;
+float:left;
+position: relative;
+}
+.left .content 
+{
+   position: relative; 
+   margin-top:60px ;
+}
+
+.left h4 {
+font: 17px/100%;
+text-transform: uppercase;
+font-weight: 900;
+padding-bottom: 20px;
+border-bottom: solid 3px #6cc49a;
+margin-bottom: 30px;
+float: left;
+width: 100%;
+display: block;
+}
+.left .content h1 , .midle .content h1
+{
+text-transform: uppercase;
+font-family: 'Roboto';
+font-size: 18px;
+color: green;
+}
+.left .content .artikel
+{
+position: inherit;
+max-height: 1000px;
+border-bottom: 1px solid #e9e9e9;
+}
+.left .content .artikel .thumbnail {
+    position: relative;
+  
+}
+.left .content .artikel .thumbnail img {
+    opacity: 1;
+}
+
+.midle
+{
+width:30%;
+position: relative;
+float:left;
+padding-left: 10px;
+}
+.midle .content 
+{
+   position: relative; 
+   margin-top:60px ;
+}
+
+.midle h4 {
+font: 17px/100%;
+text-transform: uppercase;
+font-weight: 900;
+padding-bottom: 20px;
+border-bottom: solid 3px #f58a3f;
+margin-bottom: 30px;
+float: left;
+width: 100%;
+display: block;
+}
+.midle .content h1
+{
+text-transform: uppercase;
+font-family: 'Roboto';
+font-size: 18px;
+color: #f58a3f;
+}
+.midle .content .artikel .thumbnail {
+    position: relative;
+    
+}
+.midele .content .artikel .thumbnail img {
+    opacity: 1;
+}
+
+/*start right*/
+.right
+{
+width:30%;
+position: relative;
+float:right;
+}
+
+.right h4 {
+    font: 17px/100%;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding-bottom: 20px;
+    border-bottom: solid 3px #ddb12a;
+    margin-bottom: 30px;
+    float: left;
+    width: 100%;
+    display: block;
+}
+
+
+
+/*Start pengumuman*/
+.right .pengumuman 
+{
+   position: relative;
+   /* margin-top:60px ; */
+    padding-bottom: 50px;
+}
+.right .pengumuman .bulan {
+    float: left;
+    display: block;
+    width: 20%;
+    
+
+}
+
+.right .pengumuman .content {
+    float: right;
+    display: block;
+  
+}
+
+
+
+.right .agenda {
+    position: relative;
+    float: left;
+    display: block;
+}
+
+.right .agenda .pengumuman {
+    position: relative;
+    float: left;
+    display: block;
+    width: 100%;
+}
+
+.right .agenda .pengumuman .bulan {
+    width: 20%;
+    float: left;
+    display: inline-block;
+}    
+
+.right .agenda .pengumuman .content {
+    width: 75%;
+    margin-left: 5%;
+    float: left;
+    display: inline-block;
+
+}    
+
+.right .agenda .pengumuman .content a{
+    font-size: 24px;
+   
+}
+
+/*sosok*/
+.right .sosok
+{
+    padding-top: 100px;
+}
+
+.right .sosok h4
+{
+        font: 17px/100%;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding-bottom: 20px;
+    border-bottom: solid 3px #ddb12a;
+    margin-bottom: 30px;
+    float: left;
+    width: 100%;
+    display: block;
+}
+
+
